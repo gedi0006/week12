@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
+
+
+
+
+
+.doomsday::after{
+  visibility: hidden;
+opacity: 0;
+transition: visibility 0s 2s, opacity 2s linear;
+
+}
+
+.doomsday::before{
+
+  content: "Do Not Press";
+  color:white;
+  font-size:40px;
+  font-family: 'Barriecito', cursive;
+
+
+
+
+}
+
+.coffee::before{
+
+  content: "Press Me";
+  color:white;
+  font-size:40px;
+  font-family: 'Barriecito', cursive;
+
+
+}
+
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0px 0px 10px 3px rgba(255, 0, 0, 0.4),
+      0 0 0 8px #D6D5DB,
+      0 0 0 18px #96989E;
+  }
+
+  50%{
+
+    background: rgb(32, 32, 146);
+
+  }
+
+  
+
+  25%,
+  75% {
+    box-shadow:
+      0px 0px 10px 8px rgba(255, 0, 0, 0.8),
+      0 0 0 8px #D6D5DB,
+      0 0 0 18px #96989E;
+  }
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    background-image: radial-gradient(ellipse at center, #580546 10%, #960910 85%, #960910 85%);
+  }
+
+  10%,
+  90% {
+    background-image: radial-gradient(ellipse at center, #ff0505 20%, #960910 85%, #960910 85%);
+  }
+
+  20%,
+  80% {
+    background-image: radial-gradient(ellipse at center, #580546 30%, #960910 85%, #960910 85%);
+  }
+
+  30%,
+  70% {
+    background-image: radial-gradient(ellipse at center, #ff0505 40%, #960910 85%, #960910 85%);
+  }
+
+  40%,
+  60% {
+    background-image: radial-gradient(ellipse at center, #580546 50%, #960910 85%, #960910 85%);
+  }
+
+  50% {
+    background-image: radial-gradient(ellipse at center, #ff0505 60%, #960910 85%, #960910 85%);
+  }
+}
+
+@keyframes implode {
+  0% {
+    transform: scale(1);
+
+  }
+
+  20%,
+  40% {
+    transform: scale(10);
+  }
+
+  60%,
+  80% {
+    transform: scale(0.01);
+  }
+
+  80% {
+    transform: scale(0.01);
+    opacity: 1;
+    background: transparent;
+    /* box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.9); */
+  }
+
+  100% {
+    transform: scale(0.01) ;
+    opacity: 0;
+    background: rgba;
+    /* box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.0); */
+
+
+    /* Doomsday Device going off! */
+
+    visibility: hidden;
+    transition: visibility 0s 1s, opacity 2s linear;
+
+    
+  }
+
+}
+
+
+
+.doomsday {
+  animation: pulse 2s infinite backwards fadeout 2s;
+  transition: all 3s;
+  transition-timing: ease-in-out;
+
+  
+}
+
+
+
+
+.doomsday:hover {
+  animation: wave 2s infinite backwards;
+
+  transform: rotate(1080deg) scale(2) ;
+  cursor: pointer;
+  transition: 4s ;
+
+  content: "dooonnnttt";
+
+
+  
+
+
+}
+
+.doomsday:active {
+  animation-name: wave, implode;
+  animation-duration: 0.2s, 5s;
+  animation-iteration-count: infinite, 1;
+  animation-delay: 0s, 3s;
+  animation-fill-mode: backwards, forwards;
+
+}
+
